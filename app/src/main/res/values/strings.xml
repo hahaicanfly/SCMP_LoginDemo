@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">SCMP_LoginDemo</string>
+
+    <string name="title">HOME PAGE</string>
+    <string name="hint_enter_email">User Email</string>
+    <string name="hint_enter_pwd">Password</string>
+    <string name="login">Login</string>
+    <string name="token">your token: %s</string>
+
+
+    <string name="dialog_title_error">Login Fail</string>
+    <string name="dialog_unknown_error_message">Something Wrong, Please try later.</string>
+    <string name="dialog_confirm">Confirm</string>
 </resources>

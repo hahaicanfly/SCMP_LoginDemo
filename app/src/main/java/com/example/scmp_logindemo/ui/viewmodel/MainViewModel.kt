@@ -12,9 +12,9 @@ class MainViewModel : ViewModel() {
 
     private val apiRepository: ApiRepository by lazy { ApiRepository() }
 
-    fun doLogin() {
+    fun doLogin(email: String, pwd: String) {
         viewModelScope.launch {
-            loginResult.value = apiRepository.doLogin()
+            loginResult.value = apiRepository.doLogin(email, pwd)
         }
     }
 

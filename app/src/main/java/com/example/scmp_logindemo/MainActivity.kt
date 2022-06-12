@@ -1,7 +1,8 @@
 package com.example.scmp_logindemo
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
+import com.example.scmp_logindemo.ui.fragment.HomePageFragment
 import com.example.scmp_logindemo.ui.fragment.LoginFragment
 
 class MainActivity : AppCompatActivity() {
@@ -14,9 +15,16 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun toLoginPage(){
+    private fun toLoginPage() {
         supportFragmentManager.beginTransaction()
             .replace(R.id.container, LoginFragment.newInstance())
+            .commitNow()
+    }
+
+    fun toLoginSuccess(token: String?) {
+        val homePageFragment = HomePageFragment.newInstance(token)
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.container, homePageFragment)
             .commitNow()
     }
 }
