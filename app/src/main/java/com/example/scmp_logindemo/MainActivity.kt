@@ -27,4 +27,9 @@ class MainActivity : AppCompatActivity() {
             .replace(R.id.container, homePageFragment)
             .commitNow()
     }
+
+    override fun onBackPressed() {
+        super.onBackPressed()
+        finish()
+    }
 }
